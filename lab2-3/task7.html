@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Задание 7 — Ангел и Земля в движении</title>
+  <style>
+    body { margin: 24px; font-family: Arial, sans-serif; line-height: 1.5; }
+    img { max-width: 100%; }
+    .scene {
+      position: relative;
+      overflow: hidden;
+      height: 390px;
+      padding: 120px 15px 0;
+      background: linear-gradient(#a4dcf6 0 47%, #2a97ab 48%, #146277);
+    }
+    .angel, .earth { position: absolute; width: 90px; height: 90px; }
+    .angel { top: 12px; left: 0; animation: fly 6s linear infinite alternate; }
+    .earth { left: 40px; top: 230px; animation: bob 3s ease-in-out infinite alternate; }
+    @keyframes fly { to { left: calc(100% - 90px); } }
+    @keyframes bob { to { top: 290px; } }
+    @media (prefers-reduced-motion: reduce) {
+      .angel, .earth { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Задание 7. Ангел и Земля в движении</h1>
+  <div class="scene">
+    <img class="angel" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj48cGF0aCBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjZDJkY2Y0IiBzdHJva2Utd2lkdGg9IjMiIGQ9Ik01MiA2OVExNCAyMCAxMCA2M1ExOCA5MCA1MiA3OE02OCA2OVExMDYgMjAgMTEwIDYzUTEwMiA5MCA2OCA3OCIvPjxjaXJjbGUgY3g9IjYwIiBjeT0iNDAiIHI9IjIwIiBmaWxsPSIjZmZkZmI2Ii8+PHBhdGggZD0iTTQwIDM3UTM1IDEwIDYwIDE0UTg1IDEwIDgwIDM3IiBmaWxsPSIjZWFiNTQyIi8+PGVsbGlwc2UgY3g9IjYwIiBjeT0iMTAiIHJ4PSIyNCIgcnk9IjciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZDE1OSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHBhdGggZmlsbD0iI2ZmZmJmZiIgZD0iTTQ0IDY1UTYwIDUyIDc2IDY1TDg4IDExMUgzMloiLz48Y2lyY2xlIGN4PSI1NCIgY3k9IjQwIiByPSIyIi8+PGNpcmNsZSBjeD0iNjYiIGN5PSI0MCIgcj0iMiIvPjxwYXRoIGQ9Ik01NSA0OVE2MCA1NCA2NSA0OSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYmI2NDY0IiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" alt="Летящий ангел">
+    <p>Ангел движется по горизонтали, Земля — по вертикали.</p>
+    <img class="earth" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj48ZGVmcz48cmFkaWFsR3JhZGllbnQgaWQ9ImciPjxzdG9wIHN0b3AtY29sb3I9IiM2ZmU5ZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyNDUwYmUiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NCIgZmlsbD0idXJsKCNnKSIvPjxwYXRoIGZpbGw9IiM3MGJkNjQiIGQ9Ik0yNiAyNVE0NCAxMyA1OSAyNkw1NCAzOUw2NCA0M0w1OSA1M0w0OCA1MUwzOCA3MEwyNCA2NEwyMCA0NlpNNjkgMzBMODMgMjlMOTcgNDZMODAgNTZMNzkgNjlMNjcgNjhMNTcgNDlaTTM5IDgxTDU4IDc1TDc1IDg3TDY2IDEwOVE0NyAxMTAgMzkgODEiLz48L3N2Zz4=" alt="Земля">
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Задание 12 — Гиперссылки</title>
+  <style>
+    body { margin: 24px; font-family: Arial, sans-serif; line-height: 1.5; }
+    img { max-width: 100%; }
+    nav { background: #e9f1ff; padding: 14px; }
+    section { margin: 25px 0; border-bottom: 1px solid #ddd; }
+    .spacer { height: 260px; }
+  </style>
+</head>
+<body>
+  <h1>Задание 12. Гиперссылки</h1>
+  <div id="top"></div>
+  <nav>
+    <a href="#first">Главная</a> |
+    <a href="#second">Страница 2</a> |
+    <a href="#images">Изображения</a> |
+    <a href="#table">Таблица</a> |
+    <a href="#form">Форма</a>
+  </nav>
+
+  <section id="first">
+    <p><a href="#htmllab">Перейти к контейнеру htmllab</a></p>
+    <p><a href="#second" title="Открыть вторую страницу">Вторая страница</a></p>
+    <p><a href="https://narxoz.edu.kz/" target="_blank" rel="noopener noreferrer">
+      Внешний ресурс в новой вкладке</a></p>
+    <p><a href="https://www.youtube.com/watch?v=DZVucYsM5pI" target="_blank"
+      rel="noopener noreferrer">Видео на YouTube</a></p>
+    <p><a href="data:text/plain;charset=utf-8,HTML%20links%20example"
+      download="guide.txt">Скачать документ guide.txt</a></p>
+    <p><a href="#top">Ссылка-заглушка к началу страницы</a></p>
+  </section>
+  <section id="second"><h2>Вторая страница</h2><a href="#first">Вернуться на первую</a></section>
+  <section id="images"><h2>Изображения</h2></section>
+  <section id="table"><h2>Таблица</h2></section>
+  <section id="form"><h2>Форма</h2></section>
+  <div class="spacer"></div>
+  <div id="htmllab"><h2>Контейнер htmllab</h2><p>В адресе появится #htmllab.</p></div>
+  <p><a href="#top">Вверх</a></p>
+  <!-- Для отдельных HTML-страниц и путей ../ используйте папку task12-pages в ZIP. -->
+
+</body>
+</html>

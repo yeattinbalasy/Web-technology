@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Задание 13 — Бланк заказа</title>
+  <style>
+    body { margin: 24px; font-family: Arial, sans-serif; line-height: 1.5; }
+    img { max-width: 100%; }
+    body { background: #dcffe0; }
+    form { max-width: 550px; margin: auto; padding: 25px; text-align: center;
+           border: 1px solid #74a783; }
+    label { display: block; margin: 12px; }
+    h2 { color: #17499d; font-size: 19px; }
+    button { padding: 8px 25px; }
+  </style>
+</head>
+<body>
+  <h1>Задание 13. Бланк заказа</h1>
+  <form id="order">
+    <label>Фамилия: <input name="family" required></label>
+    <label>Адрес: <input name="address" required></label>
+    <label>Телефон: <input name="phone" type="tel" required></label>
+
+    <h2>Наши товары</h2>
+    <label><input type="checkbox" name="goods" value="Мышь"> 🖱️ Мышь</label>
+    <label><input type="checkbox" name="goods" value="Компьютер"> 🖥️ Компьютер</label>
+    <label><input type="checkbox" name="goods" value="Джойстик"> 🕹️ Джойстик</label>
+
+    <h2>Сумма, которой вы располагаете</h2>
+    <label><input type="radio" name="budget" value="$100" required> $100</label>
+    <label><input type="radio" name="budget" value="$500"> $500</label>
+    <label><input type="radio" name="budget" value="$1000"> $1000</label>
+
+    <p><button type="submit">Отправить</button> <button type="reset">Сброс</button></p>
+    <p id="result" role="status"></p>
+  </form>
+  <script>
+    const form = document.querySelector('#order');
+    const result = document.querySelector('#result');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // не отправляем данные на сервер
+      const values = new FormData(form);
+      result.textContent = 'Заказ заполнен: ' + values.get('family') +
+        '; бюджет: ' + values.get('budget');
+    });
+    form.addEventListener('reset', function () { result.textContent = ''; });
+  </script>
+</body>
+</html>
