@@ -836,3 +836,48 @@ section {
     transition-duration: 0.01ms !important;
   }
 }
+/* Размер логотипов языков программирования */
+.skill-card img,
+.skill-icon,
+.skills img {
+    width: 64px !important;
+    height: 64px !important;
+    max-width: 64px !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 16px;
+}
+
+/* Карточки навыков */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(140px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 24px 18px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптация для телефона */
+@media (max-width: 520px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card img,
+    .skill-icon,
+    .skills img {
+        width: 56px !important;
+        height: 56px !important;
+    }
+}
