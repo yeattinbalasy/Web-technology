@@ -1,365 +1,603 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="Портфолио Совета Темирлана — студента и начинающего веб-разработчика"
-  >
+    <meta charset="UTF-8">
 
-  <title>Совет Темирлан — портфолио</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-  <link rel="stylesheet" href="style.css">
+    <meta
+        name="description"
+        content="Портфолио начинающего веб-разработчика Совета Темирлана"
+    >
+
+    <title>Совет Темирлан — веб-разработчик</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 
-<body id="top">
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Перейти в начало страницы">
-      <span class="brand-name">Совет Темирлан</span>
-      <span class="brand-role">Студент · Web-разработчик</span>
-    </a>
+<body id="home">
 
-    <button
-      class="menu-button"
-      type="button"
-      aria-expanded="false"
-      aria-controls="main-navigation"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-      <span class="sr-only">Открыть меню</span>
-    </button>
+    <!-- Шапка сайта -->
+    <header class="site-header">
 
-    <nav
-      id="main-navigation"
-      class="main-navigation"
-      aria-label="Основная навигация"
-    >
-      <a href="#about">Обо мне</a>
-      <a href="#projects">Подробности проекта</a>
-      <a href="#skills">Навыки</a>
-      <a href="#recommendations">Рекомендации</a>
-    </nav>
-  </header>
+        <div class="header-container">
 
-  <main>
-    <!-- Обо мне -->
-    <section
-      id="about"
-      class="about-section section-shell"
-      aria-labelledby="about-title"
-    >
-      <div class="about-copy">
-        <p class="eyebrow">Обо мне</p>
+            <a class="brand" href="#home">
+                <span class="brand-logo">СТ</span>
 
-        <h1 id="about-title">Привет, я Совет Темирлан</h1>
+                <span class="brand-text">
+                    <strong>Совет Темирлан</strong>
+                    <small>Студент · Веб-разработчик</small>
+                </span>
+            </a>
 
-        <p class="lead">
-          Я студент и начинающий веб-разработчик. Создаю понятные
-          интерфейсы, изучаю современные веб-технологии и люблю
-          превращать учебные идеи в работающие проекты.
-        </p>
+            <button
+                class="menu-button"
+                id="menu-button"
+                type="button"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                aria-controls="main-navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <p>
-          В работе уделяю внимание структуре HTML, адаптивному
-          оформлению CSS и интерактивности JavaScript. Сейчас развиваюсь
-          в направлении веб-разработки, баз данных и сетевых технологий.
-        </p>
+            <nav
+                class="navigation"
+                id="main-navigation"
+                aria-label="Главная навигация"
+            >
+                <a class="nav-link" href="#about">Обо мне</a>
+                <a class="nav-link" href="#projects">Подробности проекта</a>
+                <a class="nav-link" href="#skills">Навыки</a>
+                <a class="nav-link" href="#recommendations">Рекомендации</a>
+            </nav>
 
-        <div class="about-actions">
-          <a class="primary-button" href="#projects">
-            Посмотреть проекты
-          </a>
-
-          <a class="text-link" href="#recommendations">
-            Отзывы обо мне
-          </a>
         </div>
-      </div>
 
-      <div class="profile-frame">
-        <img
-          src="assets/profile.png"
-          alt="Иллюстрация Совета Темирлана за работой над веб-проектами"
+    </header>
+
+    <main>
+
+        <!-- Обо мне -->
+        <section class="hero section" id="about">
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <p class="section-label">Обо мне</p>
+
+                    <h1>
+                        Привет, я
+                        <span>Совет Темирлан</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Я студент и начинающий веб-разработчик. Создаю
+                        понятные адаптивные интерфейсы, изучаю современные
+                        веб-технологии и превращаю учебные идеи в работающие
+                        проекты.
+                    </p>
+
+                    <p class="hero-description">
+                        В работе уделяю внимание структуре HTML, оформлению
+                        CSS и интерактивности JavaScript. Дополнительно
+                        развиваюсь в программировании, базах данных,
+                        компьютерных сетях и DevOps.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a class="button button-primary" href="#projects">
+                            Посмотреть проекты
+                        </a>
+
+                        <a class="button button-secondary" href="#recommendations">
+                            Отзывы обо мне
+                        </a>
+
+                    </div>
+
+                    <div class="hero-statistics">
+
+                        <div class="statistic">
+                            <strong>5+</strong>
+                            <span>технологий</span>
+                        </div>
+
+                        <div class="statistic">
+                            <strong>3</strong>
+                            <span>проекта</span>
+                        </div>
+
+                        <div class="statistic">
+                            <strong>100%</strong>
+                            <span>интерес к развитию</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Встроенная иллюстрация без отдельного файла -->
+                <div class="hero-visual">
+
+                    <div class="profile-card">
+
+                        <div class="profile-decoration profile-decoration-one"></div>
+                        <div class="profile-decoration profile-decoration-two"></div>
+
+                        <div class="profile-avatar">СТ</div>
+
+                        <div class="profile-information">
+                            <span class="status">
+                                <span class="status-point"></span>
+                                Открыт к новым проектам
+                            </span>
+
+                            <h2>Frontend Developer</h2>
+                            <p>HTML · CSS · JavaScript</p>
+                        </div>
+
+                        <div class="code-window">
+
+                            <div class="code-window-header">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <code>
+                                <span class="code-purple">const</span>
+                                developer =
+                                <span class="code-blue">"Temirlan"</span>;
+                                <br>
+                                <span class="code-purple">const</span>
+                                goal =
+                                <span class="code-blue">"Create useful projects"</span>;
+                            </code>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Навыки -->
+        <section class="section section-light" id="skills">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Навыки</p>
+                    <h2>Технологии, которые я использую</h2>
+
+                    <p>
+                        Инструменты, применяемые в учебных и личных проектах.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                                alt="Логотип HTML5"
+                            >
+                        </div>
+
+                        <h3>HTML5</h3>
+                        <p>Семантическая и доступная структура страниц.</p>
+
+                        <div class="skill-progress">
+                            <span style="width: 90%"></span>
+                        </div>
+
+                        <small>Уверенный уровень</small>
+
+                    </article>
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                                alt="Логотип CSS3"
+                            >
+                        </div>
+
+                        <h3>CSS3</h3>
+                        <p>Адаптивные интерфейсы, Grid, Flexbox и анимации.</p>
+
+                        <div class="skill-progress">
+                            <span style="width: 82%"></span>
+                        </div>
+
+                        <small>Хороший уровень</small>
+
+                    </article>
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                                alt="Логотип JavaScript"
+                            >
+                        </div>
+
+                        <h3>JavaScript</h3>
+                        <p>Логика интерфейса, события и работа с DOM.</p>
+
+                        <div class="skill-progress">
+                            <span style="width: 72%"></span>
+                        </div>
+
+                        <small>Развиваю навыки</small>
+
+                    </article>
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                                alt="Логотип Git"
+                            >
+                        </div>
+
+                        <h3>Git</h3>
+                        <p>Контроль версий, коммиты и работа с GitHub.</p>
+
+                        <div class="skill-progress">
+                            <span style="width: 76%"></span>
+                        </div>
+
+                        <small>Практический уровень</small>
+
+                    </article>
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                                alt="Логотип Python"
+                            >
+                        </div>
+
+                        <h3>Python</h3>
+                        <p>Автоматизация, логика приложений и интерфейсы.</p>
+
+                        <div class="skill-progress">
+                            <span style="width: 70%"></span>
+                        </div>
+
+                        <small>Развиваю навыки</small>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Проекты -->
+        <section class="section" id="projects">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Проекты</p>
+                    <h2>Подробности проектов</h2>
+
+                    <p>
+                        Практические работы, в которых применялись
+                        программирование, базы данных и веб-технологии.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <article class="project-card">
+
+                        <div class="project-number">01</div>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Qt</span>
+                        </div>
+
+                        <h3>SafeTalk</h3>
+
+                        <p>
+                            Интеллектуальная система безопасного общения с
+                            продукционными правилами, прямым выводом и
+                            графическим интерфейсом.
+                        </p>
+
+                        <ul>
+                            <li>Проверка сообщений</li>
+                            <li>Система правил</li>
+                            <li>Графический интерфейс</li>
+                        </ul>
+
+                        <a href="#" class="project-link">
+                            Подробнее
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+                    <article class="project-card project-card-featured">
+
+                        <div class="project-number">02</div>
+
+                        <div class="project-tags">
+                            <span>SQL</span>
+                            <span>Database</span>
+                        </div>
+
+                        <h3>Car Rental Database</h3>
+
+                        <p>
+                            База данных для автопроката с таблицами клиентов,
+                            автомобилей, бронирований, возвратов и платежей.
+                        </p>
+
+                        <ul>
+                            <li>Проектирование базы данных</li>
+                            <li>SQL-запросы</li>
+                            <li>Связи и индексы</li>
+                        </ul>
+
+                        <a href="#" class="project-link">
+                            Подробнее
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+                    <article class="project-card">
+
+                        <div class="project-number">03</div>
+
+                        <div class="project-tags">
+                            <span>Bootstrap</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <h3>TechStore</h3>
+
+                        <p>
+                            Адаптивный интернет-магазин электроники с
+                            каталогом товаров, категориями, карточками и
+                            интерактивной фильтрацией.
+                        </p>
+
+                        <ul>
+                            <li>Адаптивный дизайн</li>
+                            <li>Карточки товаров</li>
+                            <li>Фильтрация категорий</li>
+                        </ul>
+
+                        <a href="#" class="project-link">
+                            Подробнее
+                            <span>→</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Рекомендации -->
+        <section
+            class="section section-light"
+            id="recommendations"
         >
 
-        <span class="availability">
-          Открыт к учебным проектам
-        </span>
-      </div>
-    </section>
+            <div class="container">
 
-    <!-- Навыки -->
-    <section
-      id="skills"
-      class="skills-section section-shell"
-      aria-labelledby="skills-title"
-    >
-      <div class="section-heading">
-        <p class="eyebrow">Навыки</p>
+                <div class="section-heading">
+                    <p class="section-label">Рекомендации</p>
+                    <h2>Отзывы о моей работе</h2>
 
-        <h2 id="skills-title">Технологии, которые я использую</h2>
+                    <p>
+                        Примеры отзывов о выполненных учебных проектах.
+                    </p>
+                </div>
 
-        <p>
-          Пять инструментов, с которыми я работаю в учебных и личных
-          проектах.
-        </p>
-      </div>
+                <div
+                    class="recommendations-grid"
+                    id="recommendations-list"
+                >
 
-      <div class="skills-grid">
-        <article class="skill-card">
-          <img src="assets/html5.svg" alt="Логотип HTML5">
+                    <article class="recommendation-card">
+                        <div class="quote">“</div>
 
-          <div>
-            <h3>HTML5</h3>
-            <p>Семантическая разметка</p>
-          </div>
-        </article>
+                        <p>
+                            Темирлан внимательно относится к требованиям
+                            задания и старается доводить проекты до рабочего
+                            состояния.
+                        </p>
 
-        <article class="skill-card">
-          <img src="assets/css3.svg" alt="Логотип CSS3">
+                        <div class="recommendation-author">
+                            <div class="author-avatar">А</div>
 
-          <div>
-            <h3>CSS3</h3>
-            <p>Адаптивные интерфейсы</p>
-          </div>
-        </article>
+                            <div>
+                                <strong>Алексей</strong>
+                                <span>Участник проекта</span>
+                            </div>
+                        </div>
+                    </article>
 
-        <article class="skill-card">
-          <img src="assets/javascript.svg" alt="Логотип JavaScript">
+                    <article class="recommendation-card">
+                        <div class="quote">“</div>
 
-          <div>
-            <h3>JavaScript</h3>
-            <p>Логика и DOM</p>
-          </div>
-        </article>
+                        <p>
+                            Быстро осваивает новые инструменты, самостоятельно
+                            ищет решения и хорошо работает с обратной связью.
+                        </p>
 
-        <article class="skill-card">
-          <img src="assets/git.svg" alt="Логотип Git">
+                        <div class="recommendation-author">
+                            <div class="author-avatar">М</div>
 
-          <div>
-            <h3>Git</h3>
-            <p>Контроль версий</p>
-          </div>
-        </article>
+                            <div>
+                                <strong>Мария</strong>
+                                <span>Одногруппница</span>
+                            </div>
+                        </div>
+                    </article>
 
-        <article class="skill-card">
-          <img src="assets/python.svg" alt="Логотип Python">
+                    <article class="recommendation-card">
+                        <div class="quote">“</div>
 
-          <div>
-            <h3>Python</h3>
-            <p>Автоматизация и приложения</p>
-          </div>
-        </article>
-      </div>
-    </section>
+                        <p>
+                            Созданные интерфейсы имеют понятную структуру,
+                            аккуратное оформление и корректно работают на
+                            разных устройствах.
+                        </p>
 
-    <!-- Проекты -->
-    <section
-      id="projects"
-      class="projects-section section-shell"
-      aria-labelledby="projects-title"
-    >
-      <div class="section-heading">
-        <p class="eyebrow">Проекты</p>
+                        <div class="recommendation-author">
+                            <div class="author-avatar">Д</div>
 
-        <h2 id="projects-title">Подробности проектов</h2>
+                            <div>
+                                <strong>Данияр</strong>
+                                <span>Тестировщик проекта</span>
+                            </div>
+                        </div>
+                    </article>
 
-        <p>
-          Практические работы, в которых я применил программирование,
-          базы данных и проектирование интерфейсов.
-        </p>
-      </div>
+                </div>
 
-      <div class="projects-grid">
-        <article class="project-card">
-          <span class="project-number">01</span>
-          <p class="project-type">Python · Qt</p>
+                <!-- Форма рекомендации -->
+                <div class="recommendation-form-container">
 
-          <h3>SafeTalk</h3>
+                    <div class="form-information">
+                        <p class="section-label">Обратная связь</p>
+                        <h2>Оставить рекомендацию</h2>
 
-          <p>
-            Интеллектуальная система безопасного общения с
-            продукционными правилами, прямым выводом и графическим
-            интерфейсом.
-          </p>
+                        <p>
+                            Напишите небольшой отзыв. После отправки он
+                            появится в общем списке рекомендаций.
+                        </p>
+                    </div>
 
-          <ul>
-            <li>База фактов и правил</li>
-            <li>Разрешение конфликтов</li>
-            <li>Сборка приложения</li>
-          </ul>
-        </article>
+                    <form id="recommendation-form">
 
-        <article class="project-card featured-project">
-          <span class="project-number">02</span>
-          <p class="project-type">SQL Server</p>
+                        <div class="form-group">
+                            <label for="recommendation-name">Ваше имя</label>
 
-          <h3>AutoRent Database</h3>
+                            <input
+                                id="recommendation-name"
+                                name="name"
+                                type="text"
+                                placeholder="Введите имя"
+                            >
+                        </div>
 
-          <p>
-            База данных автопроката с таблицами клиентов, автомобилей,
-            договоров и платежей, а также аналитическими запросами.
-          </p>
+                        <div class="form-group">
+                            <label for="recommendation-text">
+                                Текст рекомендации
+                            </label>
 
-          <ul>
-            <li>ER-диаграмма</li>
-            <li>Связи и ограничения</li>
-            <li>SQL-запросы</li>
-          </ul>
-        </article>
+                            <textarea
+                                id="recommendation-text"
+                                name="recommendation"
+                                rows="6"
+                                placeholder="Напишите рекомендацию..."
+                                required
+                            ></textarea>
+                        </div>
 
-        <article class="project-card">
-          <span class="project-number">03</span>
-          <p class="project-type">HTML · CSS · JavaScript</p>
+                        <button
+                            class="button button-primary submit-button"
+                            type="submit"
+                        >
+                            Отправить рекомендацию
+                        </button>
 
-          <h3>Smart City Dashboard</h3>
+                    </form>
 
-          <p>
-            Концепт панели умного города для просмотра состояния
-            транспорта, освещения и городских сервисов.
-          </p>
+                </div>
 
-          <ul>
-            <li>Адаптивная сетка</li>
-            <li>Карточки показателей</li>
-            <li>Интерактивные элементы</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+            </div>
 
-    <!-- Рекомендации -->
-    <section
-      id="recommendations"
-      class="recommendations-section section-shell"
-      aria-labelledby="recommendations-title"
-    >
-      <div class="section-heading">
-        <p class="eyebrow">Рекомендации</p>
+        </section>
 
-        <h2 id="recommendations-title">
-          Что говорят о моей работе
-        </h2>
-      </div>
+    </main>
 
-      <div
-        id="recommendations-list"
-        class="recommendations-grid"
-        aria-live="polite"
-      >
-        <blockquote class="recommendation-card">
-          <p>
-            «Темирлан внимательно относится к требованиям задания и
-            последовательно доводит проект до рабочего результата.»
-          </p>
+    <!-- Подвал -->
+    <footer class="site-footer">
 
-          <footer>— Участник учебной команды</footer>
-        </blockquote>
+        <div class="container footer-container">
 
-        <blockquote class="recommendation-card">
-          <p>
-            «Быстро осваивает новые инструменты, задаёт точные вопросы
-            и умеет понятно объяснить собственное решение.»
-          </p>
+            <div>
+                <strong>Совет Темирлан</strong>
+                <p>Студент и начинающий веб-разработчик</p>
+            </div>
 
-          <footer>— Одногруппник</footer>
-        </blockquote>
+            <p>© 2026 Все права защищены</p>
 
-        <blockquote class="recommendation-card">
-          <p>
-            «Хорошо структурирует код и документацию, проверяет
-            результат и спокойно исправляет найденные ошибки.»
-          </p>
-
-          <footer>— Участник совместного проекта</footer>
-        </blockquote>
-      </div>
-
-      <!-- Форма новой рекомендации -->
-      <form
-        id="recommendation-form"
-        class="recommendation-form"
-      >
-        <div class="form-intro">
-          <h3>Оставить рекомендацию</h3>
-
-          <p>
-            Добавьте новый отзыв — он появится рядом с остальными
-            рекомендациями.
-          </p>
         </div>
 
-        <label>
-          Ваше имя
+    </footer>
 
-          <input
-            id="recommender-name"
-            name="name"
-            type="text"
-            placeholder="Например, Алексей"
-          >
-        </label>
+    <!-- Кнопка наверх -->
+    <a
+        class="home-button"
+        href="#home"
+        aria-label="Вернуться наверх"
+        title="Наверх"
+    >
+        ↑
+    </a>
 
-        <label>
-          Текст рекомендации
+    <!-- Всплывающее сообщение -->
+    <div
+        class="popup"
+        id="popup"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="popup-title"
+        aria-hidden="true"
+    >
 
-          <textarea
-            id="recommendation-text"
-            name="recommendation"
-            rows="4"
-            placeholder="Напишите несколько слов о совместной работе"
-            required
-          ></textarea>
-        </label>
+        <div class="popup-icon">✓</div>
 
-        <button class="primary-button" type="submit">
-          Отправить рекомендацию
+        <h2 id="popup-title">Спасибо!</h2>
+
+        <p>Ваша рекомендация успешно добавлена.</p>
+
+        <button
+            class="button button-primary"
+            id="close-popup"
+            type="button"
+        >
+            Закрыть
         </button>
-      </form>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <p>© 2026 Совет Темирлан</p>
-
-    <p>
-      Портфолио создано с помощью HTML5, CSS и JavaScript
-    </p>
-  </footer>
-
-  <!-- Работающий значок Главная -->
-  <a
-    class="home-button"
-    href="#top"
-    aria-label="Вернуться в начало страницы"
-    title="Наверх"
-  >
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M3 11.5 12 4l9 7.5v8a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"
-      >
-      </path>
-    </svg>
-  </a>
-
-  <!-- Уведомление после добавления рекомендации -->
-  <div
-    id="recommendation-popup"
-    class="popup"
-    role="status"
-    aria-hidden="true"
-  >
-    <span class="popup-icon">✓</span>
-
-    <div>
-      <strong>Спасибо!</strong>
-      <span>Рекомендация успешно добавлена.</span>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <div class="popup-overlay" id="popup-overlay"></div>
+
 </body>
 </html>
