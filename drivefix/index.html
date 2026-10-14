@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DriveFix — автосервис в Алматы. Диагностика, техническое обслуживание, ремонт и онлайн-запись.">
+  <title>DriveFix — автосервис в Алматы</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="DriveFix — на главную">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span>DRIVEFIX</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#about">О сервисе</a>
+        <a href="#process">Как работаем</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <a class="button header-button" href="#booking">Записаться</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-dark">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Автосервис в Алматы <span>•</span> ежедневно</p>
+          <h1>Ваш автомобиль<br>в надёжных руках</h1>
+          <p class="hero-text">Диагностика, обслуживание и ремонт без лишних ожиданий. Выберите удобное время — мы позаботимся об остальном.</p>
+
+          <div class="hero-actions">
+            <a class="button" href="#booking">Записаться онлайн</a>
+            <a class="text-link" href="#services">Смотреть услуги <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <dl class="stats" aria-label="Показатели сервиса">
+            <div><dt>12 лет</dt><dd>в автосервисе</dd></div>
+            <div><dt>4.9 / 5</dt><dd>оценка клиентов</dd></div>
+            <div><dt>24/7</dt><dd>онлайн-запись</dd></div>
+          </dl>
+        </div>
+
+        <div class="car-card reveal" aria-label="Иллюстрация автомобиля">
+          <p class="car-card-label">Настроены на точность</p>
+          <img src="assets/car.png" width="580" height="290" alt="Схематичное изображение автомобиля">
+          <p>От заявки до готового авто — всё прозрачно.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light" id="services">
+      <div class="container">
+        <p class="eyebrow">Наши услуги</p>
+        <h2>Поможем с любой задачей</h2>
+        <p class="section-intro">Понятный перечень работ и стоимость до начала ремонта.</p>
+
+        <div class="cards service-grid">
+          <article class="service-card reveal">
+            <span class="card-number">01</span>
+            <h3>Диагностика</h3>
+            <p>Найдём причину неисправности и объясним, что действительно нужно исправить.</p>
+            <strong>от 8 000 ₸</strong>
+          </article>
+          <article class="service-card reveal">
+            <span class="card-number">02</span>
+            <h3>Техобслуживание</h3>
+            <p>Замена масла, фильтров и расходников по регламенту вашего автомобиля.</p>
+            <strong>от 15 000 ₸</strong>
+          </article>
+          <article class="service-card reveal">
+            <span class="card-number">03</span>
+            <h3>Ремонт и сервис</h3>
+            <p>Восстановим работу основных узлов и проверим результат перед выдачей.</p>
+            <strong>от 12 000 ₸</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking section-dark" id="booking">
+      <div class="container booking-grid">
+        <div class="booking-copy reveal">
+          <p class="eyebrow">Онлайн-запись</p>
+          <h2>Запишитесь<br>за пару минут</h2>
+          <p>Оставьте контакты и выберите услугу. Администратор подтвердит время и ответит на вопросы.</p>
+          <div class="booking-note">
+            <strong>✓ Без предоплаты</strong>
+            <span>Детали работ согласуем до начала ремонта.</span>
+          </div>
+        </div>
+
+        <form class="booking-form reveal" id="booking-form" novalidate>
+          <h3>Расскажите о вашем автомобиле</h3>
+          <div class="form-grid">
+            <label>Ваше имя
+              <input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться" required>
+            </label>
+            <label>Телефон
+              <input type="tel" name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+            </label>
+            <label>Марка автомобиля
+              <input type="text" name="car" placeholder="Например, Toyota" required>
+            </label>
+            <label>Услуга
+              <select name="service" required>
+                <option value="">Выберите услугу</option>
+                <option>Диагностика</option>
+                <option>Техобслуживание</option>
+                <option>Ремонт и сервис</option>
+              </select>
+            </label>
+            <label>Удобная дата
+              <input type="date" name="date" required>
+            </label>
+            <label>Удобное время
+              <select name="time" required>
+                <option value="">Выберите время</option>
+                <option>09:00</option><option>11:00</option><option>14:00</option><option>16:00</option><option>18:00</option>
+              </select>
+            </label>
+          </div>
+          <button class="button" type="submit">Отправить заявку</button>
+          <p class="form-caption">Отправляя заявку, вы соглашаетесь на обработку контактных данных. Это демонстрационный учебный проект.</p>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-white" id="about">
+      <div class="container">
+        <p class="eyebrow">Почему мы</p>
+        <h2>Сервис, которому можно доверять</h2>
+        <p class="section-intro">Техническая точность сочетается с удобным и честным обслуживанием.</p>
+        <div class="cards benefits-grid">
+          <article class="benefit-card reveal"><span class="card-number">01</span><h3>Прозрачная смета</h3><p>Согласуем стоимость и сроки до начала работ.</p></article>
+          <article class="benefit-card reveal"><span class="card-number">02</span><h3>Опытные мастера</h3><p>Объясним проблему простыми словами и предложим решение.</p></article>
+          <article class="benefit-card reveal"><span class="card-number">03</span><h3>Гарантия на работы</h3><p>Проверим автомобиль перед выдачей и остаёмся на связи.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light" id="process">
+      <div class="container">
+        <p class="eyebrow">Простой процесс</p>
+        <h2>Четыре шага до готового авто</h2>
+        <div class="process-grid">
+          <article class="process-card reveal"><span>01</span><div><h3>Оставьте заявку</h3><p>Выберите услугу и время</p></div></article>
+          <article class="process-card reveal"><span>02</span><div><h3>Подтвердим запись</h3><p>Уточним детали по телефону</p></div></article>
+          <article class="process-card reveal"><span>03</span><div><h3>Проведём работы</h3><p>Согласуем смету заранее</p></div></article>
+          <article class="process-card reveal"><span>04</span><div><h3>Заберите авто</h3><p>Проверим результат вместе</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-white" id="reviews">
+      <div class="container">
+        <p class="eyebrow">Отзывы клиентов</p>
+        <h2>Что говорят о сервисе</h2>
+        <div class="reviews-grid">
+          <blockquote class="review-card reveal"><div class="stars" aria-label="5 из 5">★★★★★</div><p>«Понравилось, что сразу объяснили причину поломки и озвучили стоимость. Машину забрал в срок.»</p><cite>Алексей · Toyota Camry</cite></blockquote>
+          <blockquote class="review-card reveal"><div class="stars" aria-label="5 из 5">★★★★★</div><p>«Записалась онлайн на диагностику. Всё прошло спокойно и понятно, без навязанных услуг.»</p><cite>Дана · Hyundai Tucson</cite></blockquote>
+        </div>
+        <p class="demo-note">Имена и отзывы приведены как примеры содержания для макета.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container footer-grid">
+      <div><a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"></span><span>DRIVEFIX</span></a><p>Автосервис, в котором о машине и времени клиента заботятся одинаково внимательно.</p></div>
+      <div><h3>Контакты</h3><a href="tel:+77001234567">+7 (700) 123-45-67</a><address>г. Алматы, ул. Примерная, 12</address></div>
+      <div><h3>Режим работы</h3><p>Пн–Сб: 09:00–20:00</p><p>Вс: 10:00–18:00</p></div>
+    </div>
+    <div class="container footer-bottom">© 2026 DriveFix · Учебный дизайн-проект · Цены, отзывы и контакты указаны для примера.</div>
+  </footer>
+</body>
+</html>
